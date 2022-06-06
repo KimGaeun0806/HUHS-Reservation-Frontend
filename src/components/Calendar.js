@@ -98,7 +98,6 @@ const WeekDate = styled.p`
 
 const DayName = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 
-// eslint-disable-next-line react/prop-types
 const Week = ({ start }) => {
   const NumStart = parseInt(start);
 
@@ -138,6 +137,10 @@ const Week = ({ start }) => {
       })}
     </WeekBox>
   );
+};
+
+Week.propTypes = {
+  start: PropTypes.string,
 };
 
 const Calendar = () => {
